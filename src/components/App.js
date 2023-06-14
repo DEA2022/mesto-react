@@ -71,13 +71,26 @@ function App() {
         onCloseByOverlay={closePopupsByClickOverlay}
       >
         <fieldset className="form__info">
-          <input type="text" className="form__field form__field_el_name"
-            id="form-name" name="name" placeholder="Введите имя"
-            minLength={2} maxLength={40} required />
+          <input
+            type="text"
+            className="form__field form__field_el_name"
+            id="form-name"
+            name="name"
+            placeholder="Введите имя"
+            minLength={2}
+            maxLength={40}
+            required
+          />
           <span className="form__error form-name-error" />
-          <input type="text" className="form__field form__field_el_job"
-            id="form-job" name="job" placeholder="Введите информацию о себе"
-            minLength={2} maxLength={200} required />
+          <input type="text"
+            className="form__field form__field_el_job"
+            id="form-job"
+            name="job"
+            placeholder="Введите информацию о себе"
+            minLength={2}
+            maxLength={200}
+            required
+          />
           <span className="form__error form-job-error" />
         </fieldset>
       </PopupWithForm>
@@ -97,8 +110,14 @@ function App() {
         onCloseByOverlay={closePopupsByClickOverlay}
       >
         <fieldset className="form__info">
-          <input type="url" className="form__field form__field_el_webcite"
-            id="form-src" name="src" placeholder="Ссылка на картинку" required />
+          <input
+            type="url"
+            className="form__field form__field_el_webcite"
+            id="form-src"
+            name="src"
+            placeholder="Ссылка на картинку"
+            required
+          />
           <span className="form__error form-src-error" />
         </fieldset>
       </PopupWithForm>
@@ -112,20 +131,33 @@ function App() {
         onCloseByOverlay={closePopupsByClickOverlay}
       >
         <fieldset className="form__info">
-          <input type="text" className="form__field form__field_el_place"
-            id="form-place" name="place" placeholder="Название"
-            minLength={2} maxLength={30} required />
+          <input
+            type="text"
+            className="form__field form__field_el_place"
+            id="form-place"
+            name="place"
+            placeholder="Название"
+            minLength={2}
+            maxLength={30}
+            required
+          />
           <span className="form__error form-place-error" />
-          <input type="url" className="form__field form__field_el_webcite"
-            id="form-url" name="url" placeholder="Ссылка на картинку" required />
+          <input
+            type="url"
+            className="form__field form__field_el_webcite"
+            id="form-url"
+            name="url"
+            placeholder="Ссылка на картинку"
+            required
+          />
           <span className="form__error form-url-error" />
         </fieldset>
       </PopupWithForm>
 
       <ImagePopup
         card={selectedCard}
-        onClose={closeAllPopups} 
-        onCloseByOverlay={closePopupsByClickOverlay}/>
+        onClose={closeAllPopups}
+        onCloseByOverlay={closePopupsByClickOverlay} />
     </div>
   );
 }
