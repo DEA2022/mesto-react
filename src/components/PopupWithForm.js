@@ -1,4 +1,4 @@
-import {useClosePopupsByEsc} from "../utils/useClosePopupByEsc"
+import { useClosePopupsByEsc } from "../utils/useClosePopupByEsc"
 
 function PopupWithForm({
   name,
@@ -7,19 +7,38 @@ function PopupWithForm({
   textButton,
   isOpen,
   onClose,
-  onCloseByOverlay
+  onCloseByOverlay,
+  onSubmit
 }) {
   useClosePopupsByEsc(isOpen, onClose);
 
-  const addClassNamePopup = (name === 'avatar')
-    ? 'popup__container popup__container_type_avatar'
-    : 'popup__container'
+
+  const addClassNamePopup = () => {
+    if (name === 'avatar') {
+      return 'popup__container popup__container_type_avatar'
+    }
+    if (name === 'delete') {
+      return 'popup__container popup__container_type_agreement'
+    }
+    else {
+      return 'popup__container'
+    }
+  }
+
+  const addClassNameTitle = () => {
+    if (name === 'delete') {
+      return 'popup__title popup__title_type_agreement'
+    }
+    else {
+      return 'popup__title'
+    }
+  }
 
   return (
     <div className={`popup popup_type_${name}` + (isOpen && ' popup_opened')} onClick={onCloseByOverlay}>
-      <div className={addClassNamePopup}>
-        <h2 className="popup__title">{title}</h2>
-        <form action="#" className="form" name={name} noValidate>
+      <div className={addClassNamePopup()}>
+        <h2 className={addClassNameTitle()}>{title}</h2>
+        <form action="#" className="form" name={name} onSubmit={onSubmit} noValidate>
 
           {children}
 

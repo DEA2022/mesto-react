@@ -2,10 +2,10 @@ import { useClosePopupsByEsc } from "../utils/useClosePopupByEsc";
 
 function ImagePopup({ card, isOpen, onClose, onCloseByOverlay }) {
 
-useClosePopupsByEsc(!!card.link, onClose);
+  useClosePopupsByEsc(!!card.link, onClose);
 
   return (
-    <div className={`popup popup_type_image ${card.link && 'popup_opened'}`}  onClick={onCloseByOverlay}>
+    <div className={`popup popup_type_image ${card.link && 'popup_opened'}`} onClick={onCloseByOverlay}>
       <div className="popup__img-container">
         <figure className="popup__figure">
           <img src={card.link} alt={card.name} className="popup__img" />
