@@ -131,7 +131,7 @@ function App() {
   }
 
   function handleUpdateAvatar(userInfo) {
-    api.updateUserAvatar(userInfo)
+    return api.updateUserAvatar(userInfo)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -142,7 +142,7 @@ function App() {
   }
 
   function handleAddPlace(data) {
-    api.createNewCard(data)
+    return api.createNewCard(data)
       .then((res) => {
         setCards([res, ...cards]);
         closeAllPopups();

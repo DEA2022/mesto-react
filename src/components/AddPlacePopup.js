@@ -20,9 +20,13 @@ function AddPlacePopup({
 
   function handleSubmitAddPlace(evt) {
     evt.preventDefault();
+
     onAddPlace({
       place,
       url
+    }).then(() => {
+      setPlace('')
+      setUrl('')
     })
 
   }
