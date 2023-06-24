@@ -131,7 +131,7 @@ function App() {
   }
 
   function handleUpdateAvatar(userInfo) {
-    return api.updateUserAvatar(userInfo)
+    api.updateUserAvatar(userInfo)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -142,7 +142,7 @@ function App() {
   }
 
   function handleAddPlace(data) {
-    return api.createNewCard(data)
+    api.createNewCard(data)
       .then((res) => {
         setCards([res, ...cards]);
         closeAllPopups();
@@ -181,6 +181,7 @@ function App() {
           onClose={closeAllPopups}
           onCloseByOverlay={closePopupsByClickOverlay}
           onUpdateAvatar={handleUpdateAvatar}
+          additionalClass="popup__container_type_avatar"
         />
 
         <PopupWithForm

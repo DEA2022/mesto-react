@@ -1,5 +1,5 @@
 import PopupWithForm from "./PopupWithForm"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function AddPlacePopup({
   isOpen,
@@ -24,12 +24,13 @@ function AddPlacePopup({
     onAddPlace({
       place,
       url
-    }).then(() => {
-      setPlace('')
-      setUrl('')
     })
-
   }
+
+  useEffect(() => {
+    setPlace('');
+    setUrl('');
+  }, [isOpen]);
 
   return (
     <PopupWithForm
