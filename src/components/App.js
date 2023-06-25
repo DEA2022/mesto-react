@@ -181,7 +181,6 @@ function App() {
           onClose={closeAllPopups}
           onCloseByOverlay={closePopupsByClickOverlay}
           onUpdateAvatar={handleUpdateAvatar}
-          additionalClass="popup__container_type_avatar"
         />
 
         <PopupWithForm
@@ -192,6 +191,7 @@ function App() {
           onClose={closeAllPopups}
           onCloseByOverlay={closePopupsByClickOverlay}
           onSubmit={handleSubmitCardDelete}
+          additionalClass='popup__title_type_agreement'
         />
 
         <AddPlacePopup

@@ -16,8 +16,8 @@ function PopupWithForm({
 
   return (
     <div className={`popup popup_type_${name}` + (isOpen && ' popup_opened')} onClick={onCloseByOverlay}>
-      <div className={`popup__container ${name === 'delete' ? 'popup__container_type_agreement' : additionalClass}`}>
-        <h2 className={`popup__title ${name === 'delete' ? 'popup__title_type_agreement' : ''}`}>{title}</h2>
+      <div className='popup__container'>
+        <h2 className={`popup__title ${additionalClass}`}>{title}</h2>
         <form action="#" className="form" name={name} onSubmit={onSubmit} noValidate>
 
           {children}
