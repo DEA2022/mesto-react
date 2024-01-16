@@ -29,4 +29,4 @@
 - удаление карточек;
 - реализацию лайков.
 
-* Ссылка на проект в githab [Mesto](https://dea2022.github.io/mesto-react/)https://dea2022.github.io/mesto-react/)
+* Ссылка на проект в githab [Mesto](https://dea2022.github.io/mesto-react/)
